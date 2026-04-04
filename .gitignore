@@ -1,0 +1,6 @@
+echo config.json > .gitignore
+echo Udhayakumar_CV.pdf >> .gitignore
+echo resume_base64.txt >> .gitignore
+echo *.pdf >> .gitignore
+echo *.txt >> .gitignore
+echo logs/ >> .gitignore
