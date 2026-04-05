@@ -1,0 +1,32 @@
+{
+  "naukri_email": "udhayai4747@gmail.com",
+  "naukri_password": "Udhay@6100",
+
+  "profile": {
+    "current_role": "Software Developer",
+    "experience_years": 2,
+    "current_location": "Bangalore",
+    "preferred_locations": [ "Bangalore","Chennai", "Hyderabad", "Remote"],
+    "expected_salary_lpa": 6,
+    "notice_period_days": 30
+  },
+
+  "job_search": {
+    "keywords": ["Java Developer","Software Developer", "Software Engineer","Java Backend Developer", "Backend Developer", "Java Full Stack Developer"],
+    "skills": ["Java","Springboot","microservce", "JavaScript", "SQL", "Git", "React", "Node.js"],
+    "experience_min": 1,
+    "experience_max": 3,
+    "max_applications_per_day": 20
+  },
+
+  "resume_path": "Udhayakumar_CV.pdf",
+
+  "notifications": {
+    "email": "udhayai4747@gmail.com",
+    "gmail_app_password": "tndn pgpo kxoq zrps"
+  },
+
+  "schedule_time": "09:00",
+
+  "log_file": "logs/agent_log.txt"
+}
