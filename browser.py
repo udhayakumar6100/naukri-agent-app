@@ -5,6 +5,7 @@ Phase 1: Login + Daily Profile Update
 
 import time
 import logging
+from datetime import datetime, timezone
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -143,12 +144,13 @@ class NaukriBrowser:
 
             login_btn.click()
             logger.info("   ✔ Login button clicked — waiting for redirect...")
+            login_triggered_at = datetime.now(timezone.utc)   # record exact time
             time.sleep(5)
 
             # ── Check if Naukri is asking for OTP ───────────────────
             if self._is_otp_page():
                 logger.info("   📱 Naukri asked for OTP — fetching from Gmail...")
-                otp = self._get_otp_from_gmail()
+                otp = self._get_otp_from_gmail(login_triggered_at)
                 if not otp:
                     logger.error("❌ Could not get OTP from Gmail.")
                     self._save_screenshot("otp_not_found.png")
@@ -186,40 +188,64 @@ class NaukriBrowser:
         except Exception:
             return False
 
-    def _get_otp_from_gmail(self) -> str:
-        """Fetch OTP from Gmail inbox."""
+    def _get_otp_from_gmail(self, login_triggered_at=None) -> str:
+        """Fetch OTP from Gmail — only accepts emails after login was triggered."""
         try:
             from otp_reader import fetch_naukri_otp
             gmail   = self.config["notifications"]["email"]
             app_pwd = self.config["notifications"]["gmail_app_password"]
-            return fetch_naukri_otp(gmail, app_pwd, max_wait_seconds=60)
+            return fetch_naukri_otp(gmail, app_pwd,
+                                    max_wait_seconds=90,
+                                    login_triggered_at=login_triggered_at)
         except Exception as e:
             logger.error(f"   OTP fetch error: {e}")
             return ""
 
     def _enter_otp(self, otp: str) -> bool:
-        """Enter OTP into the Naukri verification field."""
+        """
+        Enter OTP into Naukri's verification field.
+        Handles both: single input field AND 6 separate boxes.
+        """
         try:
-            otp_field = self._find_element_any([
-                (By.XPATH, '//input[@type="tel"]'),
-                (By.XPATH, '//input[@type="number"]'),
-                (By.XPATH, '//input[contains(@placeholder,"OTP")]'),
-                (By.XPATH, '//input[contains(@placeholder,"otp")]'),
-                (By.XPATH, '//input[contains(@placeholder,"code")]'),
-                (By.XPATH, '//input[contains(@name,"otp")]'),
-                (By.XPATH, '//input[contains(@id,"otp")]'),
-            ], timeout=10)
+            time.sleep(2)  # Let OTP page fully render
 
-            if not otp_field:
-                logger.error("   Could not find OTP input field.")
-                return False
+            # ── Try 6 separate boxes first (current Naukri UI) ───────
+            otp_boxes = self.driver.find_elements(
+                By.XPATH, '//input[@type="tel" or @type="number" or @maxlength="1"]'
+            )
 
-            otp_field.clear()
-            otp_field.send_keys(otp)
-            logger.info(f"   ✔ OTP entered: {otp}")
+            if len(otp_boxes) >= 4:
+                logger.info(f"   📦 Found {len(otp_boxes)} OTP boxes — entering digit by digit")
+                for i, digit in enumerate(otp[:len(otp_boxes)]):
+                    otp_boxes[i].clear()
+                    otp_boxes[i].send_keys(digit)
+                    time.sleep(0.2)
+                logger.info(f"   ✔ OTP entered digit by digit: {otp}")
+
+            else:
+                # ── Single input field fallback ───────────────────────
+                otp_field = self._find_element_any([
+                    (By.XPATH, '//input[@type="tel"]'),
+                    (By.XPATH, '//input[@type="number"]'),
+                    (By.XPATH, '//input[contains(@placeholder,"OTP")]'),
+                    (By.XPATH, '//input[contains(@placeholder,"otp")]'),
+                    (By.XPATH, '//input[contains(@placeholder,"code")]'),
+                    (By.XPATH, '//input[contains(@name,"otp")]'),
+                    (By.XPATH, '//input[contains(@id,"otp")]'),
+                ], timeout=10)
+
+                if not otp_field:
+                    logger.error("   Could not find OTP input field.")
+                    self._save_screenshot("otp_field_not_found.png")
+                    return False
+
+                otp_field.clear()
+                otp_field.send_keys(otp)
+                logger.info(f"   ✔ OTP entered in single field: {otp}")
+
             time.sleep(1)
 
-            # Click verify/submit button
+            # ── Click Verify button ───────────────────────────────────
             verify_btn = self._find_element_any([
                 (By.XPATH, '//button[contains(text(),"Verify")]'),
                 (By.XPATH, '//button[contains(text(),"Submit")]'),
@@ -228,13 +254,17 @@ class NaukriBrowser:
             ], timeout=5)
 
             if verify_btn:
-                verify_btn.click()
-                logger.info("   ✔ OTP submitted")
+                self.driver.execute_script("arguments[0].click();", verify_btn)
+                logger.info("   ✔ OTP submitted — waiting for login...")
+                time.sleep(5)  # Wait longer after OTP submission
                 return True
+
+            logger.error("   Could not find Verify button")
             return False
 
         except Exception as e:
             logger.error(f"   OTP entry error: {e}")
+            self._save_screenshot("otp_entry_error.png")
             return False
 
     # ------------------------------------------------------------------ #

@@ -1,6 +1,7 @@
 """
-otp_reader.py — Reads fresh Naukri OTP from Gmail
-Searches by TODAY's date to avoid thread grouping issues.
+otp_reader.py — Reads Naukri OTP from Gmail
+Waits for OTP email that arrives AFTER a given timestamp.
+Handles 6-box OTP input correctly.
 """
 
 import imaplib
@@ -9,84 +10,77 @@ import email.utils
 import re
 import time
 import logging
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 
 logger = logging.getLogger(__name__)
 
 
 def fetch_naukri_otp(gmail_address: str, gmail_app_password: str,
-                     max_wait_seconds: int = 90) -> str:
+                     max_wait_seconds: int = 120,
+                     login_triggered_at: datetime = None) -> str:
     """
-    Polls Gmail every 5 seconds for up to 90 seconds.
-    Searches by date to bypass Gmail thread grouping.
+    Waits for a NEW OTP email that arrives AFTER login_triggered_at.
+    Polls every 5 seconds for up to 120 seconds.
     """
-    logger.info("📧 Waiting for Naukri OTP email in Gmail...")
+    if login_triggered_at is None:
+        login_triggered_at = datetime.now(timezone.utc)
+
+    logger.info(f"📧 Waiting for NEW OTP email after {login_triggered_at.strftime('%H:%M:%S')} UTC...")
+    logger.info(f"   (ignoring any emails that existed before login)")
 
     elapsed = 0
     while elapsed < max_wait_seconds:
         try:
-            otp = _check_gmail_for_otp(gmail_address, gmail_app_password)
+            otp = _get_otp_after_time(gmail_address, gmail_app_password, login_triggered_at)
             if otp:
-                logger.info(f"✅ OTP found: {otp}")
+                logger.info(f"✅ Fresh OTP found: {otp}")
                 return otp
         except Exception as e:
             logger.warning(f"   Gmail check error: {e}")
 
         time.sleep(5)
         elapsed += 5
-        logger.info(f"   Waiting for OTP... ({elapsed}s / {max_wait_seconds}s)")
+        logger.info(f"   Waiting... ({elapsed}s / {max_wait_seconds}s)")
 
-    logger.error("❌ OTP not received within timeout.")
+    logger.error("❌ OTP email did not arrive within timeout.")
     return ""
 
 
-def _check_gmail_for_otp(gmail_address: str, app_password: str) -> str:
+def _get_otp_after_time(gmail_address: str, app_password: str,
+                         after_time: datetime) -> str:
     """
-    Search Gmail using SINCE date filter — bypasses thread grouping.
-    Returns only OTPs from emails received in the last 5 minutes.
+    Search Gmail for OTP emails that arrived strictly AFTER after_time.
     """
     mail = imaplib.IMAP4_SSL("imap.gmail.com")
     mail.login(gmail_address, app_password)
     mail.select("inbox")
 
-    # Use SINCE to get today's emails only — avoids thread grouping
     today = datetime.now(timezone.utc).strftime("%d-%b-%Y")
-
-    search_queries = [
+    queries = [
         f'(FROM "naukri" SINCE "{today}")',
         f'(SUBJECT "OTP" SINCE "{today}")',
-        f'(FROM "naukri.com" SINCE "{today}")',
-        f'(FROM "naukri")',   # broad fallback without date
+        f'(FROM "naukri")',
     ]
 
     all_ids = []
-    for query in search_queries:
+    for q in queries:
         try:
-            _, result = mail.search(None, query)
+            _, result = mail.search(None, q)
             if result and result[0]:
                 ids = result[0].split()
                 if ids:
                     all_ids = ids
-                    logger.info(f"   Found {len(ids)} emails: {query}")
                     break
-        except Exception as e:
-            logger.warning(f"   Search error: {e}")
+        except Exception:
             continue
 
     mail.logout()
 
     if not all_ids:
-        logger.warning("   No Naukri emails found")
         return ""
 
-    # Check last 10 emails — newest first — to find freshest OTP
-    now_utc    = datetime.now(timezone.utc)
-    recent_ids = all_ids[-10:]
-
-    best_otp   = ""
-    best_age   = 999
-
-    for msg_id in reversed(recent_ids):
+    # Check last 10 emails newest first
+    for msg_id in reversed(all_ids[-10:]):
         try:
             mail = imaplib.IMAP4_SSL("imap.gmail.com")
             mail.login(gmail_address, app_password)
@@ -97,40 +91,42 @@ def _check_gmail_for_otp(gmail_address: str, app_password: str) -> str:
             if not msg_data or not msg_data[0]:
                 continue
 
-            msg     = email.message_from_bytes(msg_data[0][1])
-            subject = msg.get("Subject", "")
-            date_str= msg.get("Date", "")
-            age_min = _get_age_minutes(date_str, now_utc)
+            msg      = email.message_from_bytes(msg_data[0][1])
+            subject  = msg.get("Subject", "")
+            date_str = msg.get("Date", "")
+            email_dt = _parse_date(date_str)
 
-            logger.info(f"   📨 '{subject}' — age: {age_min:.1f} min")
+            if email_dt is None:
+                continue
 
-            # Skip emails older than 8 minutes
-            if age_min > 8:
-                logger.info(f"   ⏭️  Too old ({age_min:.1f} min) — skipping")
+            diff_seconds = (email_dt - after_time).total_seconds()
+            logger.info(f"   📨 '{subject}' | arrived {diff_seconds:+.0f}s vs login time")
+
+            # Only accept emails that arrived AFTER login was triggered
+            # Allow 10s buffer for clock differences
+            if diff_seconds < -10:
+                logger.info(f"   ⏭️  Pre-login email — skipping")
                 continue
 
             body = _get_body(msg)
-            if not body:
-                continue
+            otp  = _extract_otp(body)
 
-            otp = _extract_otp(body)
-            if otp and age_min < best_age:
-                best_otp = otp
-                best_age = age_min
-                logger.info(f"   🎯 OTP candidate: {otp} (age: {age_min:.1f} min)")
+            if otp:
+                logger.info(f"   ✅ Valid OTP: {otp} (arrived {diff_seconds:+.0f}s after login)")
+                return otp
 
         except Exception as e:
             logger.warning(f"   Error: {e}")
             continue
 
-    if best_otp:
-        logger.info(f"   ✅ Using freshest OTP: {best_otp} (age: {best_age:.1f} min)")
-
-    return best_otp
+    return ""
 
 
 def _extract_otp(body: str) -> str:
-    """Extract OTP number from email body text."""
+    """Extract OTP from email body."""
+    # Remove HTML tags first
+    body_clean = re.sub(r'<[^>]+>', ' ', body)
+
     patterns = [
         r'OTP[:\s\-]+(\d{4,8})',
         r'code[:\s\-]+(\d{4,8})',
@@ -138,25 +134,23 @@ def _extract_otp(body: str) -> str:
         r'(?<!\d)(\d{4})(?!\d)',
     ]
     for pattern in patterns:
-        match = re.search(pattern, body, re.IGNORECASE)
+        match = re.search(pattern, body_clean, re.IGNORECASE)
         if match:
             return match.group(1)
     return ""
 
 
-def _get_age_minutes(date_str: str, now_utc: datetime) -> float:
-    """Returns how many minutes ago the email was sent."""
+def _parse_date(date_str: str):
     try:
         parsed = email.utils.parsedate_to_datetime(date_str)
         if parsed.tzinfo is None:
             parsed = parsed.replace(tzinfo=timezone.utc)
-        return (now_utc - parsed).total_seconds() / 60
+        return parsed
     except Exception:
-        return 999
+        return None
 
 
 def _get_body(msg) -> str:
-    """Extract full text body from email."""
     body = ""
     if msg.is_multipart():
         for part in msg.walk():
