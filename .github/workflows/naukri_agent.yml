@@ -38,14 +38,14 @@ jobs:
             "profile": {
               "current_role":        "Software Developer",
               "experience_years":    2,
-              "current_location":    "Bangalore",
-              "preferred_locations": ["Bangalore", "Chennai", "Hyderabad", "Remote"],
+              "current_location":    "Chennai",
+              "preferred_locations": ["Chennai", "Bangalore", "Hyderabad", "Remote"],
               "expected_salary_lpa": 6,
               "notice_period_days":  30
             },
             "job_search": {
-              "keywords": ["Java Developer","Software Developer", "Software Engineer","Java Backend Developer", "Backend Developer", "Java Full Stack Developer"],
-              "skills": ["Java","Springboot","microservce", "JavaScript", "SQL", "Git", "React", "Node.js"],
+              "keywords":   ["Software Developer", "Software Engineer", "Backend Developer", "Full Stack Developer"],
+              "skills":     ["Python", "Java", "JavaScript", "SQL", "Git", "React", "Node.js"],
               "experience_min": 1,
               "experience_max": 3,
               "max_applications_per_day": 15
@@ -72,6 +72,7 @@ jobs:
       - name: 🚀 Run Naukri Agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TEST_ALL_PHASES: ${{ secrets.TEST_ALL_PHASES }}
         run: python agent_cloud.py
 
       - name: 📋 Upload logs

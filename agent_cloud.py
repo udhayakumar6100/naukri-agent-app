@@ -44,6 +44,11 @@ def save_config(config):
 
 
 def get_phase(config: dict) -> int:
+    # ── TEST MODE: forces all 3 phases at once ───────────────────────
+    if os.environ.get("TEST_ALL_PHASES", "").lower() == "true":
+        logger.info("🧪 TEST MODE — Running all 3 phases!")
+        return 3
+
     start_str = config.get("agent_start_date")
     if not start_str:
         today = date.today().isoformat()
