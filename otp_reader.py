@@ -1,13 +1,15 @@
 """
-otp_reader.py — Automatically reads Naukri OTP from Gmail
-Uses Gmail IMAP — searches broadly (read + unread) for reliability.
+otp_reader.py — Reads fresh Naukri OTP from Gmail
+Searches by TODAY's date to avoid thread grouping issues.
 """
 
 import imaplib
 import email
+import email.utils
 import re
 import time
 import logging
+from datetime import datetime, timezone, timedelta
 
 logger = logging.getLogger(__name__)
 
@@ -15,8 +17,8 @@ logger = logging.getLogger(__name__)
 def fetch_naukri_otp(gmail_address: str, gmail_app_password: str,
                      max_wait_seconds: int = 90) -> str:
     """
-    Polls Gmail every 5 seconds for up to 90 seconds waiting for Naukri OTP.
-    Returns the OTP string or "" if not found.
+    Polls Gmail every 5 seconds for up to 90 seconds.
+    Searches by date to bypass Gmail thread grouping.
     """
     logger.info("📧 Waiting for Naukri OTP email in Gmail...")
 
@@ -40,45 +42,49 @@ def fetch_naukri_otp(gmail_address: str, gmail_app_password: str,
 
 def _check_gmail_for_otp(gmail_address: str, app_password: str) -> str:
     """
-    Connects to Gmail and searches recent Naukri emails for an OTP.
-    Searches read AND unread emails — no longer restricted to UNSEEN only.
+    Search Gmail using SINCE date filter — bypasses thread grouping.
+    Returns only OTPs from emails received in the last 5 minutes.
     """
     mail = imaplib.IMAP4_SSL("imap.gmail.com")
     mail.login(gmail_address, app_password)
     mail.select("inbox")
 
-    # Try multiple search strategies — broader first
+    # Use SINCE to get today's emails only — avoids thread grouping
+    today = datetime.now(timezone.utc).strftime("%d-%b-%Y")
+
     search_queries = [
-        '(FROM "naukri")',
-        '(FROM "naukri.com")',
-        '(SUBJECT "OTP")',
-        '(SUBJECT "login")',
-        '(FROM "no-reply@naukri.com")',
-        '(FROM "donotreply@naukri.com")',
+        f'(FROM "naukri" SINCE "{today}")',
+        f'(SUBJECT "OTP" SINCE "{today}")',
+        f'(FROM "naukri.com" SINCE "{today}")',
+        f'(FROM "naukri")',   # broad fallback without date
     ]
 
-    msg_ids_found = []
+    all_ids = []
     for query in search_queries:
         try:
             _, result = mail.search(None, query)
             if result and result[0]:
                 ids = result[0].split()
                 if ids:
-                    msg_ids_found = ids
-                    logger.info(f"   Found {len(ids)} emails matching: {query}")
+                    all_ids = ids
+                    logger.info(f"   Found {len(ids)} emails: {query}")
                     break
         except Exception as e:
-            logger.warning(f"   Search error for '{query}': {e}")
+            logger.warning(f"   Search error: {e}")
             continue
 
     mail.logout()
 
-    if not msg_ids_found:
-        logger.warning("   No Naukri emails found in inbox")
+    if not all_ids:
+        logger.warning("   No Naukri emails found")
         return ""
 
-    # Check the 5 most recent matching emails
-    recent_ids = msg_ids_found[-5:]
+    # Check last 10 emails — newest first — to find freshest OTP
+    now_utc    = datetime.now(timezone.utc)
+    recent_ids = all_ids[-10:]
+
+    best_otp   = ""
+    best_age   = 999
 
     for msg_id in reversed(recent_ids):
         try:
@@ -91,50 +97,74 @@ def _check_gmail_for_otp(gmail_address: str, app_password: str) -> str:
             if not msg_data or not msg_data[0]:
                 continue
 
-            msg = email.message_from_bytes(msg_data[0][1])
+            msg     = email.message_from_bytes(msg_data[0][1])
             subject = msg.get("Subject", "")
-            logger.info(f"   Checking: '{subject}'")
+            date_str= msg.get("Date", "")
+            age_min = _get_age_minutes(date_str, now_utc)
 
-            body = _get_email_body(msg)
+            logger.info(f"   📨 '{subject}' — age: {age_min:.1f} min")
+
+            # Skip emails older than 8 minutes
+            if age_min > 8:
+                logger.info(f"   ⏭️  Too old ({age_min:.1f} min) — skipping")
+                continue
+
+            body = _get_body(msg)
             if not body:
                 continue
 
-            # Try OTP patterns from most specific to least
-            patterns = [
-                r'OTP[:\s\-]+(\d{4,8})',
-                r'code[:\s\-]+(\d{4,8})',
-                r'(?<!\d)(\d{6})(?!\d)',
-                r'(?<!\d)(\d{4})(?!\d)',
-            ]
-
-            for pattern in patterns:
-                match = re.search(pattern, body, re.IGNORECASE)
-                if match:
-                    otp = match.group(1)
-                    logger.info(f"   ✅ OTP extracted: {otp}")
-                    return otp
+            otp = _extract_otp(body)
+            if otp and age_min < best_age:
+                best_otp = otp
+                best_age = age_min
+                logger.info(f"   🎯 OTP candidate: {otp} (age: {age_min:.1f} min)")
 
         except Exception as e:
-            logger.warning(f"   Error reading email: {e}")
+            logger.warning(f"   Error: {e}")
             continue
 
+    if best_otp:
+        logger.info(f"   ✅ Using freshest OTP: {best_otp} (age: {best_age:.1f} min)")
+
+    return best_otp
+
+
+def _extract_otp(body: str) -> str:
+    """Extract OTP number from email body text."""
+    patterns = [
+        r'OTP[:\s\-]+(\d{4,8})',
+        r'code[:\s\-]+(\d{4,8})',
+        r'(?<!\d)(\d{6})(?!\d)',
+        r'(?<!\d)(\d{4})(?!\d)',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, body, re.IGNORECASE)
+        if match:
+            return match.group(1)
     return ""
 
 
-def _get_email_body(msg) -> str:
-    """Extract plain text or HTML body from email message."""
+def _get_age_minutes(date_str: str, now_utc: datetime) -> float:
+    """Returns how many minutes ago the email was sent."""
+    try:
+        parsed = email.utils.parsedate_to_datetime(date_str)
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return (now_utc - parsed).total_seconds() / 60
+    except Exception:
+        return 999
+
+
+def _get_body(msg) -> str:
+    """Extract full text body from email."""
     body = ""
     if msg.is_multipart():
         for part in msg.walk():
-            content_type = part.get_content_type()
-            if content_type in ("text/plain", "text/html"):
+            if part.get_content_type() in ("text/plain", "text/html"):
                 try:
                     body += part.get_payload(decode=True).decode("utf-8", errors="ignore")
                 except Exception:
-                    try:
-                        body += str(part.get_payload())
-                    except Exception:
-                        pass
+                    body += str(part.get_payload())
     else:
         try:
             body = msg.get_payload(decode=True).decode("utf-8", errors="ignore")
