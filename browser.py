@@ -145,6 +145,19 @@ class NaukriBrowser:
             logger.info("   ✔ Login button clicked — waiting for redirect...")
             time.sleep(5)
 
+            # ── Check if Naukri is asking for OTP ───────────────────
+            if self._is_otp_page():
+                logger.info("   📱 Naukri asked for OTP — fetching from Gmail...")
+                otp = self._get_otp_from_gmail()
+                if not otp:
+                    logger.error("❌ Could not get OTP from Gmail.")
+                    self._save_screenshot("otp_not_found.png")
+                    return False
+                if not self._enter_otp(otp):
+                    logger.error("❌ Failed to enter OTP.")
+                    return False
+                time.sleep(4)
+
             current_url = self.driver.current_url
             page_title  = self.driver.title.lower()
 
@@ -162,6 +175,66 @@ class NaukriBrowser:
         except Exception as e:
             logger.error(f"❌ Unexpected login error: {e}")
             self._save_screenshot("login_exception.png")
+            return False
+
+    def _is_otp_page(self) -> bool:
+        """Check if Naukri is showing an OTP verification screen."""
+        try:
+            page_source = self.driver.page_source.lower()
+            otp_signals = ["otp", "one time", "verify", "verification code", "enter code"]
+            return any(signal in page_source for signal in otp_signals)
+        except Exception:
+            return False
+
+    def _get_otp_from_gmail(self) -> str:
+        """Fetch OTP from Gmail inbox."""
+        try:
+            from otp_reader import fetch_naukri_otp
+            gmail   = self.config["notifications"]["email"]
+            app_pwd = self.config["notifications"]["gmail_app_password"]
+            return fetch_naukri_otp(gmail, app_pwd, max_wait_seconds=60)
+        except Exception as e:
+            logger.error(f"   OTP fetch error: {e}")
+            return ""
+
+    def _enter_otp(self, otp: str) -> bool:
+        """Enter OTP into the Naukri verification field."""
+        try:
+            otp_field = self._find_element_any([
+                (By.XPATH, '//input[@type="tel"]'),
+                (By.XPATH, '//input[@type="number"]'),
+                (By.XPATH, '//input[contains(@placeholder,"OTP")]'),
+                (By.XPATH, '//input[contains(@placeholder,"otp")]'),
+                (By.XPATH, '//input[contains(@placeholder,"code")]'),
+                (By.XPATH, '//input[contains(@name,"otp")]'),
+                (By.XPATH, '//input[contains(@id,"otp")]'),
+            ], timeout=10)
+
+            if not otp_field:
+                logger.error("   Could not find OTP input field.")
+                return False
+
+            otp_field.clear()
+            otp_field.send_keys(otp)
+            logger.info(f"   ✔ OTP entered: {otp}")
+            time.sleep(1)
+
+            # Click verify/submit button
+            verify_btn = self._find_element_any([
+                (By.XPATH, '//button[contains(text(),"Verify")]'),
+                (By.XPATH, '//button[contains(text(),"Submit")]'),
+                (By.XPATH, '//button[contains(text(),"Confirm")]'),
+                (By.XPATH, '//*[@type="submit"]'),
+            ], timeout=5)
+
+            if verify_btn:
+                verify_btn.click()
+                logger.info("   ✔ OTP submitted")
+                return True
+            return False
+
+        except Exception as e:
+            logger.error(f"   OTP entry error: {e}")
             return False
 
     # ------------------------------------------------------------------ #
