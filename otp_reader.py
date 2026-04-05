@@ -1,6 +1,6 @@
 """
 otp_reader.py — Automatically reads Naukri OTP from Gmail
-Uses Gmail's IMAP to fetch the latest OTP email from Naukri.
+Uses Gmail IMAP — searches broadly (read + unread) for reliability.
 """
 
 import imaplib
@@ -13,23 +13,14 @@ logger = logging.getLogger(__name__)
 
 
 def fetch_naukri_otp(gmail_address: str, gmail_app_password: str,
-                     max_wait_seconds: int = 60) -> str:
+                     max_wait_seconds: int = 90) -> str:
     """
-    Waits for Naukri OTP email to arrive in Gmail and returns the OTP code.
-
-    Args:
-        gmail_address     : your Gmail address
-        gmail_app_password: your Gmail App Password (16 chars)
-        max_wait_seconds  : how long to wait for email (default 60s)
-
-    Returns:
-        OTP string (e.g. "482931") or "" if not found
+    Polls Gmail every 5 seconds for up to 90 seconds waiting for Naukri OTP.
+    Returns the OTP string or "" if not found.
     """
     logger.info("📧 Waiting for Naukri OTP email in Gmail...")
 
-    wait_interval = 5   # check every 5 seconds
-    elapsed       = 0
-
+    elapsed = 0
     while elapsed < max_wait_seconds:
         try:
             otp = _check_gmail_for_otp(gmail_address, gmail_app_password)
@@ -39,8 +30,8 @@ def fetch_naukri_otp(gmail_address: str, gmail_app_password: str,
         except Exception as e:
             logger.warning(f"   Gmail check error: {e}")
 
-        time.sleep(wait_interval)
-        elapsed += wait_interval
+        time.sleep(5)
+        elapsed += 5
         logger.info(f"   Waiting for OTP... ({elapsed}s / {max_wait_seconds}s)")
 
     logger.error("❌ OTP not received within timeout.")
@@ -48,52 +39,105 @@ def fetch_naukri_otp(gmail_address: str, gmail_app_password: str,
 
 
 def _check_gmail_for_otp(gmail_address: str, app_password: str) -> str:
-    """Connect to Gmail via IMAP and look for Naukri OTP in recent emails."""
-
+    """
+    Connects to Gmail and searches recent Naukri emails for an OTP.
+    Searches read AND unread emails — no longer restricted to UNSEEN only.
+    """
     mail = imaplib.IMAP4_SSL("imap.gmail.com")
     mail.login(gmail_address, app_password)
     mail.select("inbox")
 
-    # Search for recent emails from Naukri
-    _, msg_ids = mail.search(None, '(FROM "naukri" UNSEEN SUBJECT "OTP")')
+    # Try multiple search strategies — broader first
+    search_queries = [
+        '(FROM "naukri")',
+        '(FROM "naukri.com")',
+        '(SUBJECT "OTP")',
+        '(SUBJECT "login")',
+        '(FROM "no-reply@naukri.com")',
+        '(FROM "donotreply@naukri.com")',
+    ]
 
-    if not msg_ids or not msg_ids[0]:
-        # Broader search if specific one fails
-        _, msg_ids = mail.search(None, '(FROM "naukri" UNSEEN)')
+    msg_ids_found = []
+    for query in search_queries:
+        try:
+            _, result = mail.search(None, query)
+            if result and result[0]:
+                ids = result[0].split()
+                if ids:
+                    msg_ids_found = ids
+                    logger.info(f"   Found {len(ids)} emails matching: {query}")
+                    break
+        except Exception as e:
+            logger.warning(f"   Search error for '{query}': {e}")
+            continue
 
     mail.logout()
 
-    if not msg_ids or not msg_ids[0]:
+    if not msg_ids_found:
+        logger.warning("   No Naukri emails found in inbox")
         return ""
 
-    # Get the latest email
-    latest_id = msg_ids[0].split()[-1]
+    # Check the 5 most recent matching emails
+    recent_ids = msg_ids_found[-5:]
 
-    mail = imaplib.IMAP4_SSL("imap.gmail.com")
-    mail.login(gmail_address, app_password)
-    mail.select("inbox")
+    for msg_id in reversed(recent_ids):
+        try:
+            mail = imaplib.IMAP4_SSL("imap.gmail.com")
+            mail.login(gmail_address, app_password)
+            mail.select("inbox")
+            _, msg_data = mail.fetch(msg_id, "(RFC822)")
+            mail.logout()
 
-    _, msg_data = mail.fetch(latest_id, "(RFC822)")
-    mail.logout()
+            if not msg_data or not msg_data[0]:
+                continue
 
-    if not msg_data or not msg_data[0]:
-        return ""
+            msg = email.message_from_bytes(msg_data[0][1])
+            subject = msg.get("Subject", "")
+            logger.info(f"   Checking: '{subject}'")
 
-    raw_email = msg_data[0][1]
-    msg       = email.message_from_bytes(raw_email)
+            body = _get_email_body(msg)
+            if not body:
+                continue
 
-    # Extract text from email body
+            # Try OTP patterns from most specific to least
+            patterns = [
+                r'OTP[:\s\-]+(\d{4,8})',
+                r'code[:\s\-]+(\d{4,8})',
+                r'(?<!\d)(\d{6})(?!\d)',
+                r'(?<!\d)(\d{4})(?!\d)',
+            ]
+
+            for pattern in patterns:
+                match = re.search(pattern, body, re.IGNORECASE)
+                if match:
+                    otp = match.group(1)
+                    logger.info(f"   ✅ OTP extracted: {otp}")
+                    return otp
+
+        except Exception as e:
+            logger.warning(f"   Error reading email: {e}")
+            continue
+
+    return ""
+
+
+def _get_email_body(msg) -> str:
+    """Extract plain text or HTML body from email message."""
     body = ""
     if msg.is_multipart():
         for part in msg.walk():
-            if part.get_content_type() == "text/plain":
-                body += part.get_payload(decode=True).decode("utf-8", errors="ignore")
+            content_type = part.get_content_type()
+            if content_type in ("text/plain", "text/html"):
+                try:
+                    body += part.get_payload(decode=True).decode("utf-8", errors="ignore")
+                except Exception:
+                    try:
+                        body += str(part.get_payload())
+                    except Exception:
+                        pass
     else:
-        body = msg.get_payload(decode=True).decode("utf-8", errors="ignore")
-
-    # Extract 6-digit OTP from body
-    otp_match = re.search(r'\b(\d{6})\b', body)
-    if otp_match:
-        return otp_match.group(1)
-
-    return ""
+        try:
+            body = msg.get_payload(decode=True).decode("utf-8", errors="ignore")
+        except Exception:
+            body = str(msg.get_payload())
+    return body
