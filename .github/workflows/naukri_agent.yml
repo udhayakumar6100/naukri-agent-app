@@ -2,9 +2,9 @@ name: Naukri Daily Agent 🤖
 
 on:
   schedule:
-    - cron: "0 3 * * *"     # 9:00 AM IST
-    - cron: "30 7 * * *"    # 1:00 PM IST
-    - cron: "30 12 * * *"   # 6:00 PM IST
+    - cron: "30 2 * * *"   # 8:00 AM IST target → actual ~9:00-9:30 AM IST
+    - cron: "30 6 * * *"   # 12:00 PM IST target → actual ~1:00 PM IST  
+    - cron: "30 11 * * *"  # 5:00 PM IST target → actual ~6:00 PM IST
 
   # Manual trigger from GitHub website OR dashboard button
   workflow_dispatch:
