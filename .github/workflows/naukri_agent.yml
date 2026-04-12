@@ -52,17 +52,17 @@ jobs:
             "profile": {
               "current_role":        "Software Developer",
               "experience_years":    2,
-              "current_location":    "Chennai",
-              "preferred_locations": ["Chennai", "Bangalore", "Hyderabad", "Remote"],
+              "current_location":    "Bangalore",
+              "preferred_locations": ["Bangalore","Chennai", "Hyderabad", "Remote"],
               "expected_salary_lpa": 6,
               "notice_period_days":  30
             },
             "job_search": {
-              "keywords":   ["Software Developer", "Software Engineer", "Backend Developer", "Full Stack Developer"],
-              "skills":     ["Python", "Java", "JavaScript", "SQL", "Git", "React", "Node.js"],
+              "keywords":   ["Software Developer", "Software Engineer", "Backend Developer", "Full Stack Developer","Java Developer","Accociate Develper","SDE-1","SDE-2"],
+              "skills":     ["Java","Springboot","Microservices","MySQL","JWT", "JavaScript", "SQL", "Git", "React", "Node.js"],
               "experience_min": 1,
               "experience_max": 3,
-              "max_applications_per_day": 15
+              "max_applications_per_day": 25
             },
             "resume_path": "resume.pdf",
             "notifications": {
