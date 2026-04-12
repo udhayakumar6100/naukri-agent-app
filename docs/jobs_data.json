@@ -1,0 +1,14 @@
+{
+  "last_updated": "2026-04-12 09:15",
+  "total_applied": 3,
+  "total_manual": 2,
+  "applied_jobs": [
+    {"id":1,"title":"Python Developer","company":"TCS","location":"Chennai","salary":"5-8 LPA","experience":"1-3 yrs","skills":"Python, Django, SQL","score":92,"reason":"Strong Python/Django match, Chennai location aligns","url":"https://naukri.com","applied_on":"2026-04-12","applied_at":"2026-04-12 09:12"},
+    {"id":2,"title":"Backend Engineer","company":"Infosys","location":"Bangalore","salary":"6-9 LPA","experience":"2-4 yrs","skills":"Java, Spring Boot, REST","score":85,"reason":"Good Java backend match, slight location mismatch","url":"https://naukri.com","applied_on":"2026-04-12","applied_at":"2026-04-12 09:13"},
+    {"id":3,"title":"Full Stack Developer","company":"Zoho","location":"Chennai","salary":"4-7 LPA","experience":"1-2 yrs","skills":"React, Node.js, MongoDB","score":78,"reason":"React and Node.js skills match well","url":"https://naukri.com","applied_on":"2026-04-11","applied_at":"2026-04-11 09:10"}
+  ],
+  "manual_jobs": [
+    {"id":1,"title":"Software Engineer","company":"Google","location":"Bangalore","salary":"20-35 LPA","experience":"1-3 yrs","skills":"Python, Algorithms, System Design","score":88,"reason":"Strong profile match but redirects to Google careers","url":"https://naukri.com","company_portal_url":"https://careers.google.com","found_on":"2026-04-12","found_at":"2026-04-12 09:14","note":"Redirects to company portal"},
+    {"id":2,"title":"React Developer","company":"Freshworks","location":"Chennai","salary":"8-12 LPA","experience":"1-3 yrs","skills":"React, JavaScript, CSS","score":82,"reason":"Good React match, Chennai location ideal","url":"https://naukri.com","company_portal_url":"https://careers.freshworks.com","found_on":"2026-04-11","found_at":"2026-04-11 09:11","note":"Redirects to company portal"}
+  ]
+}
