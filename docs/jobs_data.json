@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-19 05:31",
-  "total_applied": 4,
+  "last_updated": "2026-04-20 05:51",
+  "total_applied": 7,
   "total_manual": 2,
   "applied_jobs": [
     {
@@ -58,6 +58,51 @@
       "url": "https://www.naukri.com/job-listings-sde-1-talentov-hyderabad-bengaluru-1-to-3-years-290126010451",
       "applied_on": "2026-04-19",
       "applied_at": "2026-04-19 05:31",
+      "status": "Applied"
+    },
+    {
+      "id": 5,
+      "title": "Platform Engineers (Full-Stack - React/Python)",
+      "company": "Organflow Ltd",
+      "location": "Erode",
+      "salary": "Not disclosed",
+      "experience": "0-5 Yrs",
+      "skills": "Fullstack DevelopmentAi TechniquesDjangoPostgresqlJavascriptNode.JsReact.JsPython",
+      "score": 75,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-platform-engineers-full-stack-react-python-organflow-ltd-erode-0-to-5-years-190426003787",
+      "applied_on": "2026-04-20",
+      "applied_at": "2026-04-20 05:51",
+      "status": "Applied"
+    },
+    {
+      "id": 6,
+      "title": "Full Stack Developer - React JS & Node JS- New delhi",
+      "company": "teamplus staffing solution",
+      "location": "New Delhi(Hauz Khas)",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "TypeScriptMern StackNode JSFull StackReact.JsFullstack DevelopmentPostgreSQLJavascript",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-developer-react-js-node-js-new-delhi-teamplus-staffing-solution-new-delhi-1-to-3-years-200426001082",
+      "applied_on": "2026-04-20",
+      "applied_at": "2026-04-20 05:51",
+      "status": "Applied"
+    },
+    {
+      "id": 7,
+      "title": "React JS Developer",
+      "company": "Bullspark Technologies Llp",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-3 Yrs",
+      "skills": "MySQLPHPReact.JsJavascriptDevelopment",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-react-js-developer-bullspark-technologies-llp-bengaluru-0-to-3-years-200426002246",
+      "applied_on": "2026-04-20",
+      "applied_at": "2026-04-20 05:51",
       "status": "Applied"
     }
   ],
