@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-20 05:51",
-  "total_applied": 7,
+  "last_updated": "2026-04-20 09:28",
+  "total_applied": 8,
   "total_manual": 2,
   "applied_jobs": [
     {
@@ -103,6 +103,21 @@
       "url": "https://www.naukri.com/job-listings-react-js-developer-bullspark-technologies-llp-bengaluru-0-to-3-years-200426002246",
       "applied_on": "2026-04-20",
       "applied_at": "2026-04-20 05:51",
+      "status": "Applied"
+    },
+    {
+      "id": 8,
+      "title": "Java Developer",
+      "company": "Vittech",
+      "location": "Bengaluru, New Delhi",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "JavaAwJavascriptSQLDevelopmentJava DevelopmentJavas",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-vittech-new-delhi-bengaluru-0-to-1-years-200426003700",
+      "applied_on": "2026-04-20",
+      "applied_at": "2026-04-20 09:28",
       "status": "Applied"
     }
   ],
