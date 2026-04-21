@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-20 14:27",
+  "last_updated": "2026-04-21 14:24",
   "total_applied": 14,
-  "total_manual": 2,
+  "total_manual": 3,
   "applied_jobs": [
     {
       "id": 1,
@@ -243,6 +243,22 @@
       "found_on": "2026-04-11",
       "found_at": "2026-04-11 09:11",
       "note": "Redirects to company portal"
+    },
+    {
+      "id": 3,
+      "title": "Frontend Developer",
+      "company": "Nectar Source",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-3 Yrs",
+      "skills": "cssui developmentvue.jsbootstrapjqueryreact.jsgitrest api integration",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-frontend-developer-nectar-source-chennai-0-to-3-years-210426501409",
+      "found_on": "2026-04-21",
+      "found_at": "2026-04-21 14:24",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
     }
   ]
 }
