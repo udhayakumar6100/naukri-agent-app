@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-24 05:46",
+  "last_updated": "2026-04-24 14:20",
   "total_applied": 14,
-  "total_manual": 7,
+  "total_manual": 9,
   "applied_jobs": [
     {
       "id": 1,
@@ -321,6 +321,38 @@
       "url": "https://www.naukri.com/job-listings-digital-health-apprentice-alcon-laboratories-india-pvt-ltd-bengaluru-1-to-3-years-230426505386",
       "found_on": "2026-04-24",
       "found_at": "2026-04-24 05:46",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 8,
+      "title": "Advanced Software Developer",
+      "company": "Solventum",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "AutomationDatabase designEclipseDebuggingJavascriptPLSQLJSONVisual Studio",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-advanced-software-developer-solventum-bengaluru-1-to-5-years-240426503411",
+      "found_on": "2026-04-24",
+      "found_at": "2026-04-24 14:20",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 9,
+      "title": "Lead Software Engineer - Backend - FinBox",
+      "company": "Finbox",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "Computer scienceSystem architectureAutomationCodingPostgresqlJavascriptData structuresSystem design",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-lead-software-engineer-backend-finbox-finbox-bengaluru-1-to-4-years-240426503420",
+      "found_on": "2026-04-24",
+      "found_at": "2026-04-24 14:20",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
