@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-29 09:38",
+  "last_updated": "2026-04-29 14:48",
   "total_applied": 14,
-  "total_manual": 13,
+  "total_manual": 14,
   "applied_jobs": [
     {
       "id": 1,
@@ -417,6 +417,22 @@
       "url": "https://www.naukri.com/job-listings-staff-software-engineer-backend-procore-bengaluru-1-to-3-years-290426500683",
       "found_on": "2026-04-29",
       "found_at": "2026-04-29 09:38",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 14,
+      "title": "Software Engineer I",
+      "company": "Talkdesk",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Product managementAutomationPostgresqlMySQLJavascriptAgileApplication developmentSIP",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-i-talkdesk-bengaluru-1-to-2-years-290426505045",
+      "found_on": "2026-04-29",
+      "found_at": "2026-04-29 14:48",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
