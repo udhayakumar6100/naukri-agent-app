@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-29 14:48",
+  "last_updated": "2026-04-30 09:37",
   "total_applied": 14,
-  "total_manual": 14,
+  "total_manual": 15,
   "applied_jobs": [
     {
       "id": 1,
@@ -433,6 +433,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-i-talkdesk-bengaluru-1-to-2-years-290426505045",
       "found_on": "2026-04-29",
       "found_at": "2026-04-29 14:48",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 15,
+      "title": "Backend Developer",
+      "company": "Lambdatest",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "algorithmscssscalabilityjquerysqlmicroservicesjavagit",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-backend-developer-lambdatest-bengaluru-1-to-3-years-300426501916",
+      "found_on": "2026-04-30",
+      "found_at": "2026-04-30 09:37",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
