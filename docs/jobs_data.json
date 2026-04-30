@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-30 09:37",
+  "last_updated": "2026-04-30 14:39",
   "total_applied": 14,
-  "total_manual": 15,
+  "total_manual": 16,
   "applied_jobs": [
     {
       "id": 1,
@@ -449,6 +449,22 @@
       "url": "https://www.naukri.com/job-listings-backend-developer-lambdatest-bengaluru-1-to-3-years-300426501916",
       "found_on": "2026-04-30",
       "found_at": "2026-04-30 09:37",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 16,
+      "title": "REACT Focused Full Stack Developer",
+      "company": "Digisource Solution(DSS)",
+      "location": "Chennai(Kodambakkam)",
+      "salary": "Not disclosed",
+      "experience": "0-3 Yrs",
+      "skills": "Restfull ApiJavascriptReact.JsNextjsPythonFirebaseCSSNode.Js",
+      "score": 80,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-react-focused-full-stack-developer-digisource-solution-dss-chennai-0-to-3-years-300426034113",
+      "found_on": "2026-04-30",
+      "found_at": "2026-04-30 14:39",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
