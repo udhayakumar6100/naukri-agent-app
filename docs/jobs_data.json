@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-04-30 14:39",
+  "last_updated": "2026-05-01 14:05",
   "total_applied": 14,
-  "total_manual": 16,
+  "total_manual": 18,
   "applied_jobs": [
     {
       "id": 1,
@@ -465,6 +465,38 @@
       "url": "https://www.naukri.com/job-listings-react-focused-full-stack-developer-digisource-solution-dss-chennai-0-to-3-years-300426034113",
       "found_on": "2026-04-30",
       "found_at": "2026-04-30 14:39",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 17,
+      "title": "Software Engineer",
+      "company": "Visa Consolidated Support Services India",
+      "location": "Hybrid - Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "software engineerkubernetesgithubrestfulmavenaireactnosql",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-visa-consolidated-support-services-india-pvt-ltd-bengaluru-1-to-2-years-010526917298",
+      "found_on": "2026-05-01",
+      "found_at": "2026-05-01 14:05",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 18,
+      "title": "Software Engineer",
+      "company": "Visa Consolidated Support Services India",
+      "location": "Hybrid - Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "software engineerkubernetesrestfulscalareactmicroservicesdockerjava",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-visa-consolidated-support-services-india-pvt-ltd-bengaluru-1-to-2-years-010526919759",
+      "found_on": "2026-05-01",
+      "found_at": "2026-05-01 14:05",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
