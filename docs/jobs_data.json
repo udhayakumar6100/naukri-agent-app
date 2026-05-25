@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-22 15:39",
+  "last_updated": "2026-05-25 11:39",
   "total_applied": 14,
-  "total_manual": 63,
+  "total_manual": 64,
   "applied_jobs": [
     {
       "id": 1,
@@ -1217,6 +1217,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-trainee-missionmind-it-services-chennai-0-to-1-years-220526028113",
       "found_on": "2026-05-22",
       "found_at": "2026-05-22 15:39",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 64,
+      "title": "Software Developer",
+      "company": "Perfect Digital Media Resources",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "JavascriptNode.JsReact.JsLaravelPythonMySQLHTMLSoftware",
+      "score": 85,
+      "reason": "Keyword match: 6 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-developer-perfect-digital-media-resources-chennai-0-to-1-years-250526011594",
+      "found_on": "2026-05-25",
+      "found_at": "2026-05-25 11:39",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
