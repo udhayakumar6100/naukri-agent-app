@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-25 15:42",
+  "last_updated": "2026-05-26 16:35",
   "total_applied": 14,
-  "total_manual": 65,
+  "total_manual": 67,
   "applied_jobs": [
     {
       "id": 1,
@@ -1249,6 +1249,38 @@
       "url": "https://www.naukri.com/job-listings-java-developer-telious-technologies-pvt-kochi-kakinada-chennai-1-to-6-years-250526501926",
       "found_on": "2026-05-25",
       "found_at": "2026-05-25 15:42",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 66,
+      "title": "Java Fullstack+ React Professional",
+      "company": "Krazymantra It Solutions",
+      "location": "Chennai, Pune",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "Object oriented designMavenspring bootUsageGITOracle SQLDatabaseJ2Ee",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-fullstack-react-professional-krazymantra-it-solutions-pune-chennai-1-to-5-years-260526506063",
+      "found_on": "2026-05-26",
+      "found_at": "2026-05-26 16:33",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 67,
+      "title": "Java Fullstack Lead -Angular",
+      "company": "Krazymantra It Solutions",
+      "location": "Bengaluru, Chennai, Hyderabad, Pune",
+      "salary": "Not disclosed",
+      "experience": "0-10 Yrs",
+      "skills": "spring bootHibernateSpring mvcNoSQLWeb technologiesOracle SQLcassandraJavascript",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-fullstack-lead-angular-krazymantra-it-solutions-hyderabad-pune-chennai-bengaluru-0-to-10-years-260526505367",
+      "found_on": "2026-05-26",
+      "found_at": "2026-05-26 16:35",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
