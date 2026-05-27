@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-27 07:15",
+  "last_updated": "2026-05-27 16:31",
   "total_applied": 14,
-  "total_manual": 68,
+  "total_manual": 70,
   "applied_jobs": [
     {
       "id": 1,
@@ -1297,6 +1297,38 @@
       "url": "https://www.naukri.com/job-listings-full-stack-net-developer-angular-react-c1-happiest-minds-technologies-bangalore-rural-bengaluru-0-to-1-years-260526012643",
       "found_on": "2026-05-27",
       "found_at": "2026-05-27 07:15",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 69,
+      "title": "Software Developer 1",
+      "company": "Bahwan CyberTek",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "Version controlGITWeb servicesdevelopment testingCodingJavascriptHTMLObject oriented programming",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-developer-1-bahwan-cybertek-chennai-0-to-1-years-270526500744",
+      "found_on": "2026-05-27",
+      "found_at": "2026-05-27 16:30",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 70,
+      "title": "CoE - Digital Engineering - Full Stack Developer",
+      "company": "Qualitest",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-3 Yrs",
+      "skills": "BackendFront endArchitectureSecurity implementationhtml5JavascriptPerformance optimizationStakeholder management",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-coe-digital-engineering-full-stack-developer-qualitest-bengaluru-0-to-3-years-270526503413",
+      "found_on": "2026-05-27",
+      "found_at": "2026-05-27 16:31",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
