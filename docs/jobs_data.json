@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-28 16:47",
+  "last_updated": "2026-05-29 11:00",
   "total_applied": 14,
-  "total_manual": 74,
+  "total_manual": 76,
   "applied_jobs": [
     {
       "id": 1,
@@ -1393,6 +1393,38 @@
       "url": "https://www.naukri.com/job-listings-full-stack-developer-satyukt-analytics-private-limited-bengaluru-0-to-2-years-280526504355",
       "found_on": "2026-05-28",
       "found_at": "2026-05-28 16:47",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 75,
+      "title": "Java Fullstack+ React Professional",
+      "company": "Krazymantra It Solutions",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "Object oriented designMavenspring bootUsageGITOracle SQLDatabaseJ2Ee",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-fullstack-react-professional-krazymantra-it-solutions-chennai-1-to-5-years-290526500362",
+      "found_on": "2026-05-29",
+      "found_at": "2026-05-29 11:00",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 76,
+      "title": "Java Developer",
+      "company": "Telious Technologies",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "Computer sciencespring bootHibernateBackendArchitectureJavascriptPLSQLJSF",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-telious-technologies-pvt-chennai-1-to-6-years-290526501749",
+      "found_on": "2026-05-29",
+      "found_at": "2026-05-29 11:00",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
