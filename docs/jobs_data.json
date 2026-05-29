@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-29 11:00",
+  "last_updated": "2026-05-29 16:30",
   "total_applied": 14,
-  "total_manual": 76,
+  "total_manual": 79,
   "applied_jobs": [
     {
       "id": 1,
@@ -1425,6 +1425,54 @@
       "url": "https://www.naukri.com/job-listings-java-developer-telious-technologies-pvt-chennai-1-to-6-years-290526501749",
       "found_on": "2026-05-29",
       "found_at": "2026-05-29 11:00",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 77,
+      "title": "Associate",
+      "company": "Anmeda Systems",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "HTML&CSS3JavascriptReact.JsC#Redux / Context APIAgile / Scrum methodologyNET Framework / .NET CoreSQL basics",
+      "score": 75,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-associate-anmeda-systems-bengaluru-1-to-2-years-290526023386",
+      "found_on": "2026-05-29",
+      "found_at": "2026-05-29 16:30",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 78,
+      "title": "PHP (Laravel) and WordPress Developer",
+      "company": "Cyces Innovation Labs Llp",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "Computer scienceBackendVersion controlGITMySQLWordpressJavascriptpayment gateways",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-php-laravel-and-wordpress-developer-cyces-innovation-labs-llp-chennai-1-to-3-years-290526505867",
+      "found_on": "2026-05-29",
+      "found_at": "2026-05-29 16:30",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 79,
+      "title": "PowerBI Developer",
+      "company": "Kenexoft Technologies",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "kubernetescssiosjquerymicroservicessqlreact.jsjava",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-powerbi-developer-kenexoft-technologies-hyderabad-0-to-1-years-290526506948",
+      "found_on": "2026-05-29",
+      "found_at": "2026-05-29 16:30",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
