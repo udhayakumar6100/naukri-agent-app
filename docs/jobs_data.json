@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-05 11:03",
+  "last_updated": "2026-06-06 06:39",
   "total_applied": 14,
-  "total_manual": 94,
+  "total_manual": 95,
   "applied_jobs": [
     {
       "id": 1,
@@ -1713,6 +1713,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-1-cashfree-payments-bengaluru-0-to-4-years-050626017857",
       "found_on": "2026-06-05",
       "found_at": "2026-06-05 11:03",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 95,
+      "title": "SDE-1 (Java Developer)",
+      "company": "Talentov",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "JavaKafkaSpring BootAWSMicroservicesJava DevelopmentSpringDevelopment",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-sde-1-java-developer-talentov-bengaluru-1-to-2-years-060626004671",
+      "found_on": "2026-06-06",
+      "found_at": "2026-06-06 06:39",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
