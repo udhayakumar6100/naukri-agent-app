@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-06 06:39",
+  "last_updated": "2026-06-08 08:22",
   "total_applied": 14,
-  "total_manual": 95,
+  "total_manual": 96,
   "applied_jobs": [
     {
       "id": 1,
@@ -1729,6 +1729,22 @@
       "url": "https://www.naukri.com/job-listings-sde-1-java-developer-talentov-bengaluru-1-to-2-years-060626004671",
       "found_on": "2026-06-06",
       "found_at": "2026-06-06 06:39",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 96,
+      "title": "ThreeJS Developer (TM_TJS)",
+      "company": "Nxtwave Disruptive Technologies (Hiring for a client)",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "3DThree.JsJavascriptReact.JsAPI",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-threejs-developer-tm-tjs-nxtwave-disruptive-technologies-hiring-for-a-client-chennai-1-to-4-years-070626005571",
+      "found_on": "2026-06-08",
+      "found_at": "2026-06-08 08:22",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
