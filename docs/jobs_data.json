@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-09 07:01",
+  "last_updated": "2026-06-09 15:46",
   "total_applied": 14,
-  "total_manual": 103,
+  "total_manual": 104,
   "applied_jobs": [
     {
       "id": 1,
@@ -1857,6 +1857,22 @@
       "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-080626927048",
       "found_on": "2026-06-09",
       "found_at": "2026-06-09 07:01",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 104,
+      "title": "SOFTWARE ENGINEER - AngularJS",
+      "company": "Happiest Minds Technologies",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "Mavenspring bootHibernateVersion controlGITWeb servicesDebuggingJavascript",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-angularjs-happiest-minds-technologies-pvt-ltd-bengaluru-1-to-6-years-090626501541",
+      "found_on": "2026-06-09",
+      "found_at": "2026-06-09 15:46",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
