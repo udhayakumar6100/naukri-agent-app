@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-10 16:30",
+  "last_updated": "2026-06-11 08:14",
   "total_applied": 14,
-  "total_manual": 108,
+  "total_manual": 109,
   "applied_jobs": [
     {
       "id": 1,
@@ -1937,6 +1937,22 @@
       "url": "https://www.naukri.com/job-listings-hih-software-engineering-associate-analyst-cigna-medical-group-hyderabad-0-to-2-years-100626505515",
       "found_on": "2026-06-10",
       "found_at": "2026-06-10 16:30",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 109,
+      "title": "Software Engineer",
+      "company": "Influencer Labs",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "AutomationLMSNoSQLArchitectureCloudManager TechnologyJavascriptAWS",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-influencer-labs-bengaluru-1-to-4-years-110626500122",
+      "found_on": "2026-06-11",
+      "found_at": "2026-06-11 08:14",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
