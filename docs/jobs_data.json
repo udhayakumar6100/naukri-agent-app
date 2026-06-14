@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-12 15:53",
+  "last_updated": "2026-06-14 10:40",
   "total_applied": 14,
-  "total_manual": 111,
+  "total_manual": 112,
   "applied_jobs": [
     {
       "id": 1,
@@ -1985,6 +1985,22 @@
       "url": "https://www.naukri.com/job-listings-java-developer-transunion-chennai-1-to-2-years-120626503872",
       "found_on": "2026-06-12",
       "found_at": "2026-06-12 15:53",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 112,
+      "title": "Fullstack Software Engineer",
+      "company": "Perfx",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "PostgresqlNode.JsFullstack DevelopmentReact.JsPythonGithubJIRASQL",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-fullstack-software-engineer-perfx-bengaluru-0-to-2-years-140626002050",
+      "found_on": "2026-06-14",
+      "found_at": "2026-06-14 10:40",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
