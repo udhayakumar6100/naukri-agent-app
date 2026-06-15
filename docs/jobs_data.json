@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-14 10:40",
+  "last_updated": "2026-06-15 13:42",
   "total_applied": 14,
-  "total_manual": 112,
+  "total_manual": 113,
   "applied_jobs": [
     {
       "id": 1,
@@ -2001,6 +2001,22 @@
       "url": "https://www.naukri.com/job-listings-fullstack-software-engineer-perfx-bengaluru-0-to-2-years-140626002050",
       "found_on": "2026-06-14",
       "found_at": "2026-06-14 10:40",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 113,
+      "title": "Software Development Engineer SDE I",
+      "company": "Apidel Technologies",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "JavaFullstack DevelopmentReact.JsAWSNoSQLDynamo DbDevelopmentSoftware development",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-development-engineer-sde-i-apidel-technologies-hyderabad-1-to-4-years-150626019459",
+      "found_on": "2026-06-15",
+      "found_at": "2026-06-15 13:42",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
