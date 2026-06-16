@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-16 12:30",
+  "last_updated": "2026-06-16 17:42",
   "total_applied": 14,
-  "total_manual": 116,
+  "total_manual": 118,
   "applied_jobs": [
     {
       "id": 1,
@@ -2065,6 +2065,38 @@
       "url": "https://www.naukri.com/job-listings-fullstack-developer-sirasoft-consultancy-services-chennai-0-to-1-years-160626025689",
       "found_on": "2026-06-16",
       "found_at": "2026-06-16 12:30",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 117,
+      "title": "Software Engineer",
+      "company": "Insure Pro 20",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "c++csshibernatejquerysqlspringjavagit",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-insure-pro-2-0-bengaluru-0-to-1-years-160626503339",
+      "found_on": "2026-06-16",
+      "found_at": "2026-06-16 17:40",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 118,
+      "title": "Consultant Software Engineer (NodeJS, React, and GCP)",
+      "company": "HCA Healthcare",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "cdcontinuous integrationkubernetespythonci/cdvue.jsrelational databasesjavascript",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-consultant-software-engineer-nodejs-react-and-gcp-hca-healthcare-hyderabad-1-to-4-years-160626504586",
+      "found_on": "2026-06-16",
+      "found_at": "2026-06-16 17:42",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
