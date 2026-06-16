@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-16 08:57",
+  "last_updated": "2026-06-16 12:30",
   "total_applied": 14,
-  "total_manual": 115,
+  "total_manual": 116,
   "applied_jobs": [
     {
       "id": 1,
@@ -2049,6 +2049,22 @@
       "url": "https://www.naukri.com/job-listings-application-support-engineer-accenture-solutions-pvt-ltd-bengaluru-1-to-4-years-150626932806",
       "found_on": "2026-06-16",
       "found_at": "2026-06-16 08:57",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 116,
+      "title": "Fullstack Developer",
+      "company": "Sirasoft Consultancy Pvt Ltd",
+      "location": "Chennai(Thirumudivakkam)",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "MySQLReact.JsPythonGITRest Api DevelopmentNode.JsAPIFull Stack",
+      "score": 80,
+      "reason": "Keyword match: 6 skills matched",
+      "url": "https://www.naukri.com/job-listings-fullstack-developer-sirasoft-consultancy-services-chennai-0-to-1-years-160626025689",
+      "found_on": "2026-06-16",
+      "found_at": "2026-06-16 12:30",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
