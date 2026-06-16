@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-15 13:42",
+  "last_updated": "2026-06-16 08:57",
   "total_applied": 14,
-  "total_manual": 113,
+  "total_manual": 115,
   "applied_jobs": [
     {
       "id": 1,
@@ -2017,6 +2017,38 @@
       "url": "https://www.naukri.com/job-listings-software-development-engineer-sde-i-apidel-technologies-hyderabad-1-to-4-years-150626019459",
       "found_on": "2026-06-15",
       "found_at": "2026-06-15 13:42",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 114,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Software EngineerRoot Cause AnalysisJavaComplianceApisDebuggingSql ServerProgramming",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-150626931208",
+      "found_on": "2026-06-16",
+      "found_at": "2026-06-16 08:57",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 115,
+      "title": "Application Support Engineer",
+      "company": "Accenture",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "javafull stack developmentversion controlhibernatejavascriptdatabase managementgitpostgresql",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-application-support-engineer-accenture-solutions-pvt-ltd-bengaluru-1-to-4-years-150626932806",
+      "found_on": "2026-06-16",
+      "found_at": "2026-06-16 08:57",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
