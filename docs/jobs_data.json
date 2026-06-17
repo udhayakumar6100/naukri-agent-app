@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-16 17:42",
+  "last_updated": "2026-06-17 08:42",
   "total_applied": 14,
-  "total_manual": 118,
+  "total_manual": 119,
   "applied_jobs": [
     {
       "id": 1,
@@ -2097,6 +2097,22 @@
       "url": "https://www.naukri.com/job-listings-consultant-software-engineer-nodejs-react-and-gcp-hca-healthcare-hyderabad-1-to-4-years-160626504586",
       "found_on": "2026-06-16",
       "found_at": "2026-06-16 17:42",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 119,
+      "title": "React Developer",
+      "company": "Expleo",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "Computer scienceBackendVersion controlGITFront endAgile scrumDebuggingJavascript",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-react-developer-expleo-group-chennai-1-to-5-years-170626501963",
+      "found_on": "2026-06-17",
+      "found_at": "2026-06-17 08:42",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
