@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-17 08:42",
+  "last_updated": "2026-06-17 12:05",
   "total_applied": 14,
-  "total_manual": 119,
+  "total_manual": 120,
   "applied_jobs": [
     {
       "id": 1,
@@ -2113,6 +2113,22 @@
       "url": "https://www.naukri.com/job-listings-react-developer-expleo-group-chennai-1-to-5-years-170626501963",
       "found_on": "2026-06-17",
       "found_at": "2026-06-17 08:42",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 120,
+      "title": "Angular Full Stack Developer",
+      "company": "Plus Max Group Of Companies",
+      "location": "Chennai, Madurai, Tiruppur, Salem, Tiruchirapalli, Coimbatore",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "c#cssweb applicationajaxjavascriptjquerysql serverangular",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-angular-full-stack-developer-plus-max-group-of-companies-madurai-tiruppur-salem-chennai-tiruchirapalli-coimbatore-1-to-6-years-170626502732",
+      "found_on": "2026-06-17",
+      "found_at": "2026-06-17 12:05",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
