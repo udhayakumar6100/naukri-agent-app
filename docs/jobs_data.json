@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-19 11:54",
+  "last_updated": "2026-06-20 07:10",
   "total_applied": 14,
-  "total_manual": 129,
+  "total_manual": 130,
   "applied_jobs": [
     {
       "id": 1,
@@ -2273,6 +2273,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-corent-technology-chennai-1-to-2-years-190626500754",
       "found_on": "2026-06-19",
       "found_at": "2026-06-19 11:54",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 130,
+      "title": "Full Stack Developer (React + Node.js + MySQL)",
+      "company": "Dwison Advisory Llp",
+      "location": "Hybrid - Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-3 Yrs",
+      "skills": "Fullstack DevelopmentNode.JsReact.JsAi PlatformMySQLJavascriptFull StackArtificial Intelligence",
+      "score": 80,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-developer-react-node-js-mysql-dwison-advisory-llp-hyderabad-0-to-3-years-200626011492",
+      "found_on": "2026-06-20",
+      "found_at": "2026-06-20 07:10",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
