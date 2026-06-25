@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-25 10:29",
+  "last_updated": "2026-06-25 15:29",
   "total_applied": 14,
-  "total_manual": 136,
+  "total_manual": 137,
   "applied_jobs": [
     {
       "id": 1,
@@ -2385,6 +2385,22 @@
       "url": "https://www.naukri.com/job-listings-java-developer-mobily-infotech-mit-bengaluru-1-to-3-years-250626022325",
       "found_on": "2026-06-25",
       "found_at": "2026-06-25 10:29",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 137,
+      "title": "Fresher Graduate Engineer Trainee (Full Stack Developer)",
+      "company": "STL Digital",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "JavaNode.jsReactAngularPythonOOPSRest ApisData Structures",
+      "score": 85,
+      "reason": "Keyword match: 6 skills matched",
+      "url": "https://www.naukri.com/job-listings-fresher-graduate-engineer-trainee-full-stack-developer-stl-digital-bengaluru-0-to-1-years-250626040419",
+      "found_on": "2026-06-25",
+      "found_at": "2026-06-25 15:29",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
