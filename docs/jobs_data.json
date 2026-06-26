@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-25 15:29",
+  "last_updated": "2026-06-26 15:16",
   "total_applied": 14,
-  "total_manual": 137,
+  "total_manual": 138,
   "applied_jobs": [
     {
       "id": 1,
@@ -2401,6 +2401,22 @@
       "url": "https://www.naukri.com/job-listings-fresher-graduate-engineer-trainee-full-stack-developer-stl-digital-bengaluru-0-to-1-years-250626040419",
       "found_on": "2026-06-25",
       "found_at": "2026-06-25 15:29",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 138,
+      "title": "Full Stack Developer",
+      "company": "Kerdos Infrasoft",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "BackendNoSQLFront endWeb technologiesHP data protectorAgile developmentCloudJavascript",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-developer-kerdos-infrasoft-bengaluru-1-to-6-years-260626505625",
+      "found_on": "2026-06-26",
+      "found_at": "2026-06-26 15:16",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
