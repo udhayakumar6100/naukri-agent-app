@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-06 11:52",
+  "last_updated": "2026-07-06 16:13",
   "total_applied": 14,
-  "total_manual": 155,
+  "total_manual": 156,
   "applied_jobs": [
     {
       "id": 1,
@@ -2689,6 +2689,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-cloud-native-microservices-aws-experian-plc-hyderabad-1-to-4-years-060726501830",
       "found_on": "2026-07-06",
       "found_at": "2026-07-06 11:52",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 156,
+      "title": "Java Developer",
+      "company": "Nokia",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-5 Yrs",
+      "skills": "Java DevelopmentJavaCdPostgresqlSql ServerKafkaFull StackCi/Cd",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-nokia-solutions-and-networks-india-p-ltd-chennai-0-to-5-years-060726922613",
+      "found_on": "2026-07-06",
+      "found_at": "2026-07-06 16:13",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
