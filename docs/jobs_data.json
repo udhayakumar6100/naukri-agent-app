@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-08 09:51",
+  "last_updated": "2026-07-09 10:42",
   "total_applied": 14,
-  "total_manual": 159,
+  "total_manual": 160,
   "applied_jobs": [
     {
       "id": 1,
@@ -2753,6 +2753,22 @@
       "url": "https://www.naukri.com/job-listings-full-stack-developer-java-angular-ibs-software-chennai-1-to-3-years-080726500456",
       "found_on": "2026-07-08",
       "found_at": "2026-07-08 09:51",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 160,
+      "title": "SDE I / SDE II - Java Developer",
+      "company": "M2P",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "JavaSpring BootMicroservicesSpring MVCMS SQL ServeData StructuresJSPRedis",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-sde-i-sde-ii-java-developer-m2p-fintech-chennai-1-to-5-years-090726015604",
+      "found_on": "2026-07-09",
+      "found_at": "2026-07-09 10:42",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
