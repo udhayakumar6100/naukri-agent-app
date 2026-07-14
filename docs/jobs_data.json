@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-14 05:41",
+  "last_updated": "2026-07-14 14:32",
   "total_applied": 14,
-  "total_manual": 168,
+  "total_manual": 169,
   "applied_jobs": [
     {
       "id": 1,
@@ -2897,6 +2897,22 @@
       "url": "https://www.naukri.com/job-listings-software-development-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-4-years-130726930094",
       "found_on": "2026-07-14",
       "found_at": "2026-07-14 05:41",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 169,
+      "title": "Specialist, Software Engineer - (Mainframe)",
+      "company": "Nationwide Insurance",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "insurancegithubcbatch processingfinancial servicesjavascriptcloudjcl",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-specialist-software-engineer-mainframe-nationwide-mutual-insurance-company-hyderabad-1-to-5-years-140726502806",
+      "found_on": "2026-07-14",
+      "found_at": "2026-07-14 14:32",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
