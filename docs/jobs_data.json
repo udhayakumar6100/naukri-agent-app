@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-31 06:22",
+  "last_updated": "2026-07-31 15:04",
   "total_applied": 14,
-  "total_manual": 184,
+  "total_manual": 186,
   "applied_jobs": [
     {
       "id": 1,
@@ -3153,6 +3153,38 @@
       "url": "https://www.naukri.com/job-listings-associate-software-engineer-1-powerschool-chennai-1-to-6-years-300726501906",
       "found_on": "2026-07-31",
       "found_at": "2026-07-31 06:22",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 185,
+      "title": "PHP Developer",
+      "company": "Knowledgesprint Technologies",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-3 Yrs",
+      "skills": "jQueryGITCodingMySQLJavascriptAgilePHPPerformance optimization",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-php-developer-knowledgesprint-technologies-india-pvt-ltd-hyderabad-0-to-3-years-310726501339",
+      "found_on": "2026-07-31",
+      "found_at": "2026-07-31 15:03",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 186,
+      "title": "Adobe Commerce(Magento) Backend Developer",
+      "company": "Wsaudiology",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "restfulcustomizationadobe commercebackend developerbackend developmentcode qualityjavascriptrestful apis",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-adobe-commerce-magento-backend-developer-wsaudiology-bengaluru-1-to-4-years-310726500161",
+      "found_on": "2026-07-31",
+      "found_at": "2026-07-31 15:04",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
