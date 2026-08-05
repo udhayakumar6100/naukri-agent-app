@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-04 15:05",
+  "last_updated": "2026-08-05 15:02",
   "total_applied": 14,
-  "total_manual": 191,
+  "total_manual": 192,
   "applied_jobs": [
     {
       "id": 1,
@@ -3265,6 +3265,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-ethos-life-technologies-bengaluru-0-to-2-years-040826501455",
       "found_on": "2026-08-04",
       "found_at": "2026-08-04 15:05",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 192,
+      "title": "Fullstack Developer",
+      "company": "Techf Solutions",
+      "location": "Remote",
+      "salary": "Not disclosed",
+      "experience": "0-4 Yrs",
+      "skills": "Node.jsFullstack DevelopmentReact.jsAPI IntegrationCsrfHTTPHtml/CssSQL",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-fullstack-developer-techf-solutions-bengaluru-0-to-4-years-050826036316",
+      "found_on": "2026-08-05",
+      "found_at": "2026-08-05 15:02",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
