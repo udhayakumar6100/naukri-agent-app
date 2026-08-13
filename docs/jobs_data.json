@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-13 08:56",
+  "last_updated": "2026-08-13 14:04",
   "total_applied": 14,
-  "total_manual": 212,
+  "total_manual": 213,
   "applied_jobs": [
     {
       "id": 1,
@@ -3601,6 +3601,22 @@
       "url": "https://www.naukri.com/job-listings-full-stack-developer-php-python-react-js-zealous-services-chennai-1-to-4-years-130826017818",
       "found_on": "2026-08-13",
       "found_at": "2026-08-13 08:56",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 213,
+      "title": "Junior Full Stack Developer",
+      "company": "Artmac Soft",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "emerging technologiessoftware developmentuxhtml5rest apifull stack developerjsnosql",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-junior-full-stack-developer-artmac-soft-hyderabad-0-to-2-years-130826503505",
+      "found_on": "2026-08-13",
+      "found_at": "2026-08-13 14:04",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
