@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-12 14:05",
+  "last_updated": "2026-08-13 08:56",
   "total_applied": 14,
-  "total_manual": 211,
+  "total_manual": 212,
   "applied_jobs": [
     {
       "id": 1,
@@ -3585,6 +3585,22 @@
       "url": "https://www.naukri.com/job-listings-ai-automation-test-engineer-javascript-java-zycus-infotech-pvt-ltd-bengaluru-0-to-4-years-120826501552",
       "found_on": "2026-08-12",
       "found_at": "2026-08-12 14:05",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 212,
+      "title": "Full Stack Developer (PHP / Python / React.js)",
+      "company": "Zealous Services",
+      "location": "Chennai(Nungambakkam)",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "CRM DevelopmentPHP Full Stack DevelopmentFullstack DevelopmentPython DevelopmentReact.jsRestfull APICSSJava Script Ajax",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-developer-php-python-react-js-zealous-services-chennai-1-to-4-years-130826017818",
+      "found_on": "2026-08-13",
+      "found_at": "2026-08-13 08:56",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
