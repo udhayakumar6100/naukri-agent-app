@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-01 16:56",
+  "last_updated": "2026-09-03 12:16",
   "total_applied": 14,
-  "total_manual": 231,
+  "total_manual": 232,
   "applied_jobs": [
     {
       "id": 1,
@@ -3905,6 +3905,22 @@
       "url": "https://www.naukri.com/job-listings-java-developer-tp-bengaluru-1-to-6-years-010926036175",
       "found_on": "2026-09-01",
       "found_at": "2026-09-01 16:56",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 232,
+      "title": "Java Script Developer",
+      "company": "N J Suresh And Associates",
+      "location": "Bengaluru, Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "JavascriptApexjQueryNode.jsTailwind CSSSQLScriptingDevelopment",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-script-developer-innowave-360-consulting-private-limited-chennai-bengaluru-1-to-3-years-030926024384",
+      "found_on": "2026-09-03",
+      "found_at": "2026-09-03 12:16",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
