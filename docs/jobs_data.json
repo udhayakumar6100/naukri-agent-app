@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-03 12:16",
+  "last_updated": "2026-09-04 07:56",
   "total_applied": 14,
-  "total_manual": 232,
+  "total_manual": 233,
   "applied_jobs": [
     {
       "id": 1,
@@ -3921,6 +3921,22 @@
       "url": "https://www.naukri.com/job-listings-java-script-developer-innowave-360-consulting-private-limited-chennai-bengaluru-1-to-3-years-030926024384",
       "found_on": "2026-09-03",
       "found_at": "2026-09-03 12:16",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 233,
+      "title": "Software Development Engineer 1 / 2",
+      "company": "Moveinsync Technology Solutions",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "SpringbooJavaPostgresqlkafkaMicroservicesRest APIsSoftware engineeringSoftware development",
+      "score": 80,
+      "reason": "Keyword match: 6 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-development-engineer-1-2-moveinsync-technology-solutions-bengaluru-1-to-6-years-040926014573",
+      "found_on": "2026-09-04",
+      "found_at": "2026-09-04 07:56",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
