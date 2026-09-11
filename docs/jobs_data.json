@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-11 08:00",
+  "last_updated": "2026-09-11 12:24",
   "total_applied": 14,
-  "total_manual": 245,
+  "total_manual": 248,
   "applied_jobs": [
     {
       "id": 1,
@@ -4129,6 +4129,54 @@
       "url": "https://www.naukri.com/job-listings-analyst-i-infrastructure-services-dxc-technology-bengaluru-1-to-5-years-100926502593",
       "found_on": "2026-09-11",
       "found_at": "2026-09-11 08:00",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 246,
+      "title": "Developer I - Software Engineering",
+      "company": "UST",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "cssoraclemavenreactjavascriptmicroservicessqlgradle",
+      "score": 80,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-developer-i-software-engineering-ust-bengaluru-0-to-2-years-110926500905",
+      "found_on": "2026-09-11",
+      "found_at": "2026-09-11 12:22",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 247,
+      "title": "Java Developer",
+      "company": "Randomtrees",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "JavaKafkaReact.jsSpring BootSpring BatchMicroservicesSpringJava Development",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-randomtrees-chennai-0-to-1-years-110926012371",
+      "found_on": "2026-09-11",
+      "found_at": "2026-09-11 12:24",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 248,
+      "title": "ReactJS Developer",
+      "company": "Bitcot Technologies",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "cursorcssapi integrationandroidaijscase studiesjavascript",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-reactjs-developer-bitcot-technologies-chennai-1-to-2-years-110926502149",
+      "found_on": "2026-09-11",
+      "found_at": "2026-09-11 12:24",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
