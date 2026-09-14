@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-11 12:24",
+  "last_updated": "2026-09-14 08:50",
   "total_applied": 14,
-  "total_manual": 248,
+  "total_manual": 249,
   "applied_jobs": [
     {
       "id": 1,
@@ -4177,6 +4177,22 @@
       "url": "https://www.naukri.com/job-listings-reactjs-developer-bitcot-technologies-chennai-1-to-2-years-110926502149",
       "found_on": "2026-09-11",
       "found_at": "2026-09-11 12:24",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 249,
+      "title": "Graduate Trainee - Java - Full Stack - Remote",
+      "company": "Independent Recruitment Consultant (freelancer)",
+      "location": "Remote",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "JavaNode.jsSpring BootReact.jsTrainingStackBootstrapBoot",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-graduate-trainee-java-full-stack-remote-independent-recruitment-consultant-freelancer-chennai-0-to-1-years-140926008161",
+      "found_on": "2026-09-14",
+      "found_at": "2026-09-14 08:50",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
