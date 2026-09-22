@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-21 14:27",
+  "last_updated": "2026-09-22 08:28",
   "total_applied": 14,
-  "total_manual": 256,
+  "total_manual": 257,
   "applied_jobs": [
     {
       "id": 1,
@@ -4305,6 +4305,22 @@
       "url": "https://www.naukri.com/job-listings-specialist-software-engineer-angular-developer-nationwide-mutual-insurance-company-hyderabad-1-to-4-years-210926502119",
       "found_on": "2026-09-21",
       "found_at": "2026-09-21 14:27",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 257,
+      "title": "Fullstack Developer",
+      "company": "NeoDove",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "MongoDBNode.jsAWSTypeScriptCI/CD pipelinesand SQL databases. React.js GitJavaScriptAI-assisted development tools such as Cursor",
+      "score": 80,
+      "reason": "Keyword match: 6 skills matched",
+      "url": "https://www.naukri.com/job-listings-fullstack-developer-neodove-bengaluru-1-to-2-years-220926008663",
+      "found_on": "2026-09-22",
+      "found_at": "2026-09-22 08:28",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
