@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-07 14:45",
+  "last_updated": "2026-10-12 10:37",
   "total_applied": 14,
-  "total_manual": 267,
+  "total_manual": 268,
   "applied_jobs": [
     {
       "id": 1,
@@ -4481,6 +4481,22 @@
       "url": "https://www.naukri.com/job-listings-backend-developer-node-js-mongodb-mysql-cafs-infotech-chennai-0-to-1-years-071026502167",
       "found_on": "2026-10-07",
       "found_at": "2026-10-07 14:45",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 268,
+      "title": "JAVA Developer Fresher",
+      "company": "TECH TALENT",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "Spring BootJavaOOPSSQLDevelopmentSpringBoot",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-fresher-tech-talent-chennai-0-to-1-years-121026007036",
+      "found_on": "2026-10-12",
+      "found_at": "2026-10-12 10:37",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
