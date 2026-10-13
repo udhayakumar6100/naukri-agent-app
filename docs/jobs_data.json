@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-12 10:37",
+  "last_updated": "2026-10-13 15:16",
   "total_applied": 14,
-  "total_manual": 268,
+  "total_manual": 269,
   "applied_jobs": [
     {
       "id": 1,
@@ -4497,6 +4497,22 @@
       "url": "https://www.naukri.com/job-listings-java-developer-fresher-tech-talent-chennai-0-to-1-years-121026007036",
       "found_on": "2026-10-12",
       "found_at": "2026-10-12 10:37",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 269,
+      "title": "Junior/Associate Engineer",
+      "company": "Nexiotech",
+      "location": "Remote",
+      "salary": "Not disclosed",
+      "experience": "0-3 Yrs",
+      "skills": "Java ServletsFullstack DevelopmentRest API ServicesSpring BootAWSCI CD PipelineGITJavascript",
+      "score": 75,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-junior-associate-engineer-nexiotech-bengaluru-0-to-3-years-131026048044",
+      "found_on": "2026-10-13",
+      "found_at": "2026-10-13 15:16",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
