@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-13 15:16",
+  "last_updated": "2026-10-14 08:38",
   "total_applied": 14,
-  "total_manual": 269,
+  "total_manual": 270,
   "applied_jobs": [
     {
       "id": 1,
@@ -4513,6 +4513,22 @@
       "url": "https://www.naukri.com/job-listings-junior-associate-engineer-nexiotech-bengaluru-0-to-3-years-131026048044",
       "found_on": "2026-10-13",
       "found_at": "2026-10-13 15:16",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 270,
+      "title": "Application Support Engineer",
+      "company": "Accenture",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "javafull stack developmentversion controlhibernatejavascriptdatabase managementgitpostgresql",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-application-support-engineer-accenture-solutions-pvt-ltd-bengaluru-1-to-4-years-131026942256",
+      "found_on": "2026-10-14",
+      "found_at": "2026-10-14 08:38",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
