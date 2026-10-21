@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-19 14:53",
+  "last_updated": "2026-10-21 08:30",
   "total_applied": 14,
-  "total_manual": 276,
+  "total_manual": 278,
   "applied_jobs": [
     {
       "id": 1,
@@ -4625,6 +4625,38 @@
       "url": "https://www.naukri.com/job-listings-whatsapp-software-engineer-android-meta-bengaluru-1-to-4-years-191026500339",
       "found_on": "2026-10-19",
       "found_at": "2026-10-19 14:53",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 277,
+      "title": "Java Script Developer",
+      "company": "N J Suresh And Associates",
+      "location": "Bengaluru, Chennai, Hyderabad, Pune",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "TypescriptNode.jsJavaScriptingDevelopmentReact.jsJavascript",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-script-developer-n-j-suresh-and-associates-hyderabad-pune-chennai-bengaluru-1-to-3-years-230926021081",
+      "found_on": "2026-10-21",
+      "found_at": "2026-10-21 08:29",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 278,
+      "title": "SDE I - Java Developer",
+      "company": "M2P",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "JavaSpring BootMicroservicesSpring MVCMS SQL ServeData StructuresJSPRedis",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-sde-i-java-developer-m2p-fintech-chennai-1-to-4-years-090726015604",
+      "found_on": "2026-10-21",
+      "found_at": "2026-10-21 08:30",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
