@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-26 14:32",
+  "last_updated": "2026-10-27 13:32",
   "total_applied": 14,
-  "total_manual": 286,
+  "total_manual": 287,
   "applied_jobs": [
     {
       "id": 1,
@@ -4785,6 +4785,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-ror-cades-studec-technologies-india-bengaluru-1-to-2-years-261026503708",
       "found_on": "2026-10-26",
       "found_at": "2026-10-26 14:32",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 287,
+      "title": "Software Engineer/Sr. Engineer/Lead/Analyst",
+      "company": "Tillersail Services And Consulting",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-7 Yrs",
+      "skills": "CodingEclipseSQLBootCsJavascriptIntelligenceSpring Boot",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-sr-engineer-lead-analyst-tillersail-services-and-consulting-bengaluru-0-to-7-years-271026028787",
+      "found_on": "2026-10-27",
+      "found_at": "2026-10-27 13:32",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
