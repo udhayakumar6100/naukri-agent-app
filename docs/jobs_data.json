@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-27 13:32",
+  "last_updated": "2026-10-27 18:16",
   "total_applied": 14,
-  "total_manual": 287,
+  "total_manual": 288,
   "applied_jobs": [
     {
       "id": 1,
@@ -4801,6 +4801,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-sr-engineer-lead-analyst-tillersail-services-and-consulting-bengaluru-0-to-7-years-271026028787",
       "found_on": "2026-10-27",
       "found_at": "2026-10-27 13:32",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 288,
+      "title": "Java Back End Developer",
+      "company": "Infosys",
+      "location": "Hybrid - Bengaluru, Hyderabad, Pune",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "BootBackend DevelopmentJava DevelopmentSpring BootSQLBootstrapMicroservicesJava",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-back-end-developer-infosys-hyderabad-pune-bengaluru-1-to-2-years-271026031984",
+      "found_on": "2026-10-27",
+      "found_at": "2026-10-27 18:16",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
