@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-27 18:16",
+  "last_updated": "2026-10-28 14:17",
   "total_applied": 14,
-  "total_manual": 288,
+  "total_manual": 289,
   "applied_jobs": [
     {
       "id": 1,
@@ -4817,6 +4817,22 @@
       "url": "https://www.naukri.com/job-listings-java-back-end-developer-infosys-hyderabad-pune-bengaluru-1-to-2-years-271026031984",
       "found_on": "2026-10-27",
       "found_at": "2026-10-27 18:16",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 289,
+      "title": "Hiring For software engineer(c with linux)",
+      "company": "Xevyte Technologies",
+      "location": "Hybrid - Bengaluru, Bangalore Rural",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "SQLMySQLDataLinuxC++SQL MySQLData structuresSoftware",
+      "score": 70,
+      "reason": "Keyword match: 1 skills matched",
+      "url": "https://www.naukri.com/job-listings-hiring-for-software-engineer-c-with-linux-xevyte-technologies-bangalore-rural-bengaluru-1-to-4-years-281026023433",
+      "found_on": "2026-10-28",
+      "found_at": "2026-10-28 14:17",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
