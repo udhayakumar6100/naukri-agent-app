@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-28 14:17",
+  "last_updated": "2026-10-29 14:36",
   "total_applied": 14,
-  "total_manual": 289,
+  "total_manual": 291,
   "applied_jobs": [
     {
       "id": 1,
@@ -4833,6 +4833,38 @@
       "url": "https://www.naukri.com/job-listings-hiring-for-software-engineer-c-with-linux-xevyte-technologies-bangalore-rural-bengaluru-1-to-4-years-281026023433",
       "found_on": "2026-10-28",
       "found_at": "2026-10-28 14:17",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 290,
+      "title": "Software Engineer-Full Stack Java Developer",
+      "company": "Nest Digital",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "J2EeFull StackCsCSSMicroservicesDBMSSoftware developmentMaven",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-full-stack-java-developer-nest-digital-bengaluru-0-to-1-years-291026501440",
+      "found_on": "2026-10-29",
+      "found_at": "2026-10-29 14:35",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 291,
+      "title": "Software Engineer, Senior (Java + React)",
+      "company": "Strategy",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-7 Yrs",
+      "skills": "ContainerCsJavascriptArchitectureCSSToolsElkAWS",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-senior-java-react-strategy-chennai-0-to-7-years-291026500457",
+      "found_on": "2026-10-29",
+      "found_at": "2026-10-29 14:36",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
